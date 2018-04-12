@@ -24,7 +24,7 @@ public class FacebookLoginTest extends Core{
 
 	@Then("^chce poczekac pare sekund$")
 	public void chce_poczekac_pare_sekund() throws Throwable {
-	   
+		driver.close();
 	}
 
 }

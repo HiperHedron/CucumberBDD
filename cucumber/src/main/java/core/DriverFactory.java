@@ -21,13 +21,14 @@ public class DriverFactory {
 	private static DesiredCapabilities cap = null;
 	private static String useGridHub;
 	private static BrowserTypes browser;
-	
 
 	public static WebDriver createDriver(boolean grid) {
 		// GRID or LOCAL
 		if (grid) {
+			
 			// GRID SWITCH
 			switch (browser.getName()) {
+			
 			case "chrome":
 				cap = DesiredCapabilities.chrome();
 				cap.setBrowserName("chrome");
@@ -46,6 +47,7 @@ public class DriverFactory {
 				cap.setCapability("acceptSslCerts", "true");
 				cap.setPlatform(Platform.WINDOWS);
 				break;
+				
 			}
 
 			try {
@@ -68,68 +70,55 @@ public class DriverFactory {
 			case "firefox":
 				driver = new FirefoxDriver();
 				break;
+
 			case "edge":
 				driver = new EdgeDriver();
 				break;
 
 			}
 		}
-		
+
 		return driver;
 	}
-
 
 	public static WebDriver getDriver() {
 		return driver;
 	}
 
-
 	public static void setDriver(WebDriver driver) {
 		DriverFactory.driver = driver;
 	}
-
 
 	public static ChromeOptions getOptions() {
 		return options;
 	}
 
-
 	public static void setOptions(ChromeOptions options) {
 		DriverFactory.options = options;
 	}
-
 
 	public static DesiredCapabilities getCap() {
 		return cap;
 	}
 
-
 	public static void setCap(DesiredCapabilities cap) {
 		DriverFactory.cap = cap;
 	}
-
 
 	public static String getUseGridHub() {
 		return useGridHub;
 	}
 
-
 	public static void setUseGridHub(String useGridHub) {
 		DriverFactory.useGridHub = useGridHub;
 	}
-
 
 	public static BrowserTypes getBrowser() {
 		return browser;
 	}
 
-
 	public static void setBrowser(BrowserTypes browser) {
 		DriverFactory.browser = browser;
 	}
-	
-	
-	
-	
 
 }

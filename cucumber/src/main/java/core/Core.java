@@ -2,7 +2,7 @@ package core;
 
 import org.openqa.selenium.WebDriver;
 
-import core.model.BrowserName;
+import core.model.BrowserTypes;
 
 public class Core {
 	
@@ -11,7 +11,7 @@ public class Core {
 	
 	public Core() {
 		DriverFactory.setUseGridHub("http://192.168.1.118:4444/wd/hub");
-		DriverFactory.setBrowser(BrowserName.CHROME);
+		DriverFactory.setBrowser(BrowserTypes.CHROME);
 		driver = DriverFactory.createDriver(grid);
 	}
 	

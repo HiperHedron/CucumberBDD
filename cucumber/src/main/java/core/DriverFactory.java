@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import core.model.BrowserName;
+import core.model.BrowserTypes;
 
 public class DriverFactory {
 
@@ -20,7 +20,7 @@ public class DriverFactory {
 	private static ChromeOptions options = null;
 	private static DesiredCapabilities cap = null;
 	private static String useGridHub;
-	private static BrowserName browser;
+	private static BrowserTypes browser;
 	
 
 	public static WebDriver createDriver(boolean grid) {
@@ -119,12 +119,12 @@ public class DriverFactory {
 	}
 
 
-	public static BrowserName getBrowser() {
+	public static BrowserTypes getBrowser() {
 		return browser;
 	}
 
 
-	public static void setBrowser(BrowserName browser) {
+	public static void setBrowser(BrowserTypes browser) {
 		DriverFactory.browser = browser;
 	}
 	

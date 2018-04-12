@@ -1,12 +1,12 @@
 package core.model;
 
-public enum BrowserName {
+public enum BrowserTypes {
 	
 	CHROME("chrome"), FIREFOX("firefox"), EDGE("edge"), OPERA("opera");
 	
 	final String name;
 	
-	BrowserName(String newName) {
+	BrowserTypes(String newName) {
 		name = newName;
 	}
 
